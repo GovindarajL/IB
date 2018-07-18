@@ -1,5 +1,5 @@
 
-Soltion1:-
+//Soltion1:-
 
 public class Solution {
     // DO NOT MODIFY THE LIST. IT IS READ ONLY
@@ -37,20 +37,20 @@ public class Solution {
     }
 }
 
-
+/*
 Compilation and correctness successfully passed. But in efficiency says error "Time Limit Exceeded. Your submission didn't complete in the allocated time limit.
 
 In actual interview it is expected to write the most optimal solution at the first attempt. Please be careful, you might not get a second chance in front of a real Interviewer."
 
 Action:- Need to improve the efficency
+*/
 
-
-Solution2:-
+/*Solution2:-
 
 Alg:-
 
 1. Using Build-in method of Java Arrays.sort with user defined comparator. 
-
+*/
 public class Solution {
     // DO NOT MODIFY THE LIST. IT IS READ ONLY
     /*
@@ -80,10 +80,77 @@ public class Solution {
     }
 }
 
+-------------------------------------------------------------------------------------------------------------
 /*
 Try the shortest Sum for an array and LargestSum and ShortestSum for a given Integer E.g. i/p: 109 o/p:- 901 
 
 */
+
+/*LargestSum from a given Integer:-
+
+I/p: 1209 o/p: 9201
+Algorithm:-
+
+1. Convert int to String using String.valueOf() to easily get each digit from the digit using charAt()
+2. from i=9 to i=0 iterate through for loop check each digit in the string for every iteration of for loop if digit matches i then append it to the resultant string
+3. convert the resultant string to integer and return it
+
+code:-
+*/
+public int largestSum(int num) {
+  String numStr = String.valueOf(num);
+  int len = numStr.length(),res="";
+  for(int i=9;i>=0;i--) {
+    for(int j=0;j<len;j++) {
+      if(Character.getNumericValue(numStr.charAt(j))==i)
+        res+=String.valueOf(i);
+    }
+  }
+  return Integer.parseInt(res);
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
